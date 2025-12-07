@@ -114,6 +114,9 @@ if selected == "Home":
 
     st.markdown("""
                 Before taking the test, there are pre-test that should be taken.
+                - To calculate the BMI, it is suggested to visit the following website.
+
+                https://www.yazio.com/en/bmi-calculator?utm_source=google&utm_medium=gads&utm_campaign=22055484152&utm_content=178242375332&utm_term=bmi%20calculator&gad_source=1&gad_campaignid=22055484152&gbraid=0AAAAAoNfjafMQfPH8vne3267mS_ju8_Gu&gclid=Cj0KCQiA6NTJBhDEARIsAB7QHD0AwMyTw1NmdfnP0x2RFpJ-kFeLKGVE-robR6pry2qn0odMD_XKsdgaAsAHEALw_wcB
 
                 - To calculate the Weekly Alcohol Consumption Unit, it is suggested to visit the following website.
                 
@@ -164,7 +167,7 @@ with st.form("prediction_form"):
     col3, col4 = st.columns(2)
 
     with col3:
-        bmi = st.number_input("BMI", min_value=10, max_value=50, value=None, placeholder="10.0 - 50.0")
+        bmi = st.number_input("BMI*", min_value=10, max_value=50, value=None, placeholder="10.0 - 50.0")
         smoking = st.selectbox("Smoking", ["", 'Yes', 'No'], index=0)
         alcohol = st.number_input("Weekly Alchohol Consumption Unit*", min_value=0, max_value=30, value=None, placeholder="0 - 30")
     
@@ -311,6 +314,7 @@ if submitted:
     else:
         st.error(f"🟢 **Prediction: Negative for Alzheimer's Disease**")
         st.info("Continue with regular check-ups and healthy lifestyle.")
+
 
 
 
