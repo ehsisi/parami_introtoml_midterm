@@ -154,11 +154,11 @@ with st.form("prediction_form"):
     col1, col2 = st.columns(2)
 
     with col1:
-        age = st.number_input("Age", min_value=0, max_value=150, value=None, placeholder="Enter age") # I want blank and no initial value
-        gender = st.selectbox("Gender", ["", 'M', 'F'], index=0)
+        age = st.number_input("Age", min_value=0, max_value=150, value=None, value=25) # I want blank and no initial value
+        gender = st.selectbox("Gender", [ 'M', 'F'])
 
     with col2:
-        educ = st.selectbox("EducationLevel", ["", 'No Formal Education', 'High School', 'Bachelor Degree', 'Higher Degrees'], index=0)
+        educ = st.selectbox("EducationLevel", ['No Formal Education', 'High School', 'Bachelor Degree', 'Higher Degrees'])
 
     st.markdown("---")
 
@@ -167,14 +167,14 @@ with st.form("prediction_form"):
     col3, col4 = st.columns(2)
 
     with col3:
-        bmi = st.number_input("BMI*", min_value=10, max_value=50, value=None, placeholder="10.0 - 50.0")
-        smoking = st.selectbox("Smoking", ["", 'Yes', 'No'], index=0)
-        alcohol = st.number_input("Weekly Alchohol Consumption Unit*", min_value=0, max_value=30, value=None, placeholder="0 - 30")
+        bmi = st.number_input("BMI*", min_value=10, max_value=50, value=None, value=25)
+        smoking = st.selectbox("Smoking", ['Yes', 'No'])
+        alcohol = st.number_input("Weekly Alchohol Consumption Unit*", min_value=0, max_value=30, value=None, value=15)
     
     with col4:
-        physical = st.selectbox("Weekly Physical Activity Quality",  ["", 'Terrible', 'Poor', 'Fair', 'Good', 'Excellent'], index=0)
-        diet = st.number_input("Diet Quality Score*", min_value=0, max_value=30, value=None, placeholder="0 - 30")
-        sleep = st.selectbox("Sleep Quality",  ["", 'Terrible', 'Poor', 'Fair', 'Good', 'Excellent'], index=0)
+        physical = st.selectbox("Weekly Physical Activity Quality",  ['Terrible', 'Poor', 'Fair', 'Good', 'Excellent'])
+        diet = st.number_input("Diet Quality Score*", min_value=0, max_value=30, value=None, value=10)
+        sleep = st.selectbox("Sleep Quality",  ['Terrible', 'Poor', 'Fair', 'Good', 'Excellent'])
     
     st.markdown("---")
 
@@ -183,14 +183,14 @@ with st.form("prediction_form"):
     col5, col6 = st.columns(2)
 
     with col5:
-        history = st.selectbox("Family History", ["", 'Yes', 'No'], index=0)
-        cardio = st.selectbox("Cardiovascular Disease", ["", 'Yes', 'No'], index=0)
-        diabetes = st.selectbox("Diabetes", ["", 'Yes', 'No'], index=0)
+        history = st.selectbox("Family History", ['Yes', 'No'])
+        cardio = st.selectbox("Cardiovascular Disease", ['Yes', 'No'])
+        diabetes = st.selectbox("Diabetes", ['Yes', 'No'])
     
     with col6:
-        depression = st.selectbox("Depression", ["", 'Yes', 'No'], index=0)
-        head = st.selectbox("Head Injury", ["", 'Yes', 'No'], index=0)
-        hypertension = st.selectbox("Hypertension", ["", 'Yes', 'No'], index=0)
+        depression = st.selectbox("Depression", ['Yes', 'No'])
+        head = st.selectbox("Head Injury", ['Yes', 'No'])
+        hypertension = st.selectbox("Hypertension", ['Yes', 'No'])
     
     st.markdown("---")
 
@@ -199,14 +199,14 @@ with st.form("prediction_form"):
     col7, col8 = st.columns(2)
 
     with col7:
-        systolic = st.number_input("Systolic Blood Pressure*", min_value=40, max_value=200, value=None, placeholder="40 - 200")
-        diastolic = st.number_input("Diastolic Blood Pressure*", min_value=10, max_value=180, value=None, placeholder="10 - 180")
-        cholesteroltotal = st.number_input("Cholesterol Total*", min_value=100, max_value=300, value=None, placeholder="100 - 300")
+        systolic = st.number_input("Systolic Blood Pressure*", min_value=40, max_value=200, value=80)
+        diastolic = st.number_input("Diastolic Blood Pressure*", min_value=10, max_value=180, value=60)
+        cholesteroltotal = st.number_input("Cholesterol Total*", min_value=100, max_value=300, value=200)
         
     with col8:
-        cholesterolldl = st.number_input("Cholesterol LDL*", min_value=40, max_value=200, value=None, placeholder="40 - 200")
-        cholesterolhdl = st.number_input("Cholesterol HDL*", min_value=10, max_value=120, value=None, placeholder="10 - 120")
-        cholesteroltri = st.number_input("Cholesterol Triglycerides*", min_value=40, max_value=450, value=None, placeholder="40 - 450")
+        cholesterolldl = st.number_input("Cholesterol LDL*", min_value=40, max_value=200, value=60)
+        cholesterolhdl = st.number_input("Cholesterol HDL*", min_value=10, max_value=120, value=100)
+        cholesteroltri = st.number_input("Cholesterol Triglycerides*", min_value=40, max_value=450, value=250)
     
     st.markdown("---")
 
@@ -215,13 +215,13 @@ with st.form("prediction_form"):
     col9, col10 = st.columns(2)
 
     with col9:
-        mmse = st.number_input("Mini Mental State Examination Score", min_value=0, max_value=30, value=None, placeholder="0 - 30")
-        functassess = st.selectbox("FunctionalAssessment",  ["", 'Terrible', 'Poor', 'Fair', 'Good', 'Excellent'], index=0)
-        memory = st.selectbox("Memory Complaints", ["", 'Yes', 'No'], index=0)
+        mmse = st.number_input("Mini Mental State Examination Score", min_value=0, max_value=30, value=20)
+        functassess = st.selectbox("FunctionalAssessment",  ['Terrible', 'Poor', 'Fair', 'Good', 'Excellent'])
+        memory = st.selectbox("Memory Complaints", ['Yes', 'No'])
     
     with col10:
-        behavior = st.selectbox("Behavioral Problems", ["", 'Yes', 'No'], index=0)
-        adl = st.number_input("Activities of Daily Living Score*", min_value=0, max_value=10, value=None, placeholder="0 - 10")
+        behavior = st.selectbox("Behavioral Problems", ['Yes', 'No'])
+        adl = st.number_input("Activities of Daily Living Score*", min_value=0, max_value=10, value=5)
     
     st.markdown("---")
 
@@ -230,13 +230,13 @@ with st.form("prediction_form"):
     col11, col12 = st.columns(2)
 
     with col11:    
-        confusion = st.selectbox("Confusion", ["", 'Yes', 'No'], index=0)
-        disorientation = st.selectbox("Disorientation", ["", 'Yes', 'No'], index=0)
-        personality = st.selectbox("Personality Changes", ["", 'Yes', 'No'], index=0)
+        confusion = st.selectbox("Confusion", ['Yes', 'No'])
+        disorientation = st.selectbox("Disorientation", ['Yes', 'No'])
+        personality = st.selectbox("Personality Changes", ['Yes', 'No'])
     
     with col12:
-        completetasks = st.selectbox("Difficultiy in Completing Tasks", ["", 'Yes', 'No'], index=0)
-        forgetful = st.selectbox("Forgetfulness", ["", 'Yes', 'No'], index=0)
+        completetasks = st.selectbox("Difficultiy in Completing Tasks", ['Yes', 'No'])
+        forgetful = st.selectbox("Forgetfulness", ['Yes', 'No'])
 
     st.markdown("---")
 
@@ -314,6 +314,7 @@ if submitted:
     else:
         st.error(f"🟢 **Prediction: Negative for Alzheimer's Disease**")
         st.info("Continue with regular check-ups and healthy lifestyle.")
+
 
 
 
