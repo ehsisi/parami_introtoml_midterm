@@ -154,7 +154,7 @@ with st.form("prediction_form"):
     col1, col2 = st.columns(2)
 
     with col1:
-        age = st.number_input("Age", min_value=0, max_value=150,value=25) # I want blank and no initial value
+        age = st.number_input("Age", min_value=0, max_value=150,value=25)
         gender = st.selectbox("Gender", [ 'M', 'F'])
 
     with col2:
@@ -167,13 +167,13 @@ with st.form("prediction_form"):
     col3, col4 = st.columns(2)
 
     with col3:
-        bmi = st.number_input("BMI*", min_value=10, max_value=50, value=None, value=25)
+        bmi = st.number_input("BMI*", min_value=10, max_value=50, value=25)
         smoking = st.selectbox("Smoking", ['Yes', 'No'])
-        alcohol = st.number_input("Weekly Alchohol Consumption Unit*", min_value=0, max_value=30, value=None, value=15)
+        alcohol = st.number_input("Weekly Alchohol Consumption Unit*", min_value=0, max_value=30, value=15)
     
     with col4:
         physical = st.selectbox("Weekly Physical Activity Quality",  ['Terrible', 'Poor', 'Fair', 'Good', 'Excellent'])
-        diet = st.number_input("Diet Quality Score*", min_value=0, max_value=30, value=None, value=10)
+        diet = st.number_input("Diet Quality Score*", min_value=0, max_value=30, value=10)
         sleep = st.selectbox("Sleep Quality",  ['Terrible', 'Poor', 'Fair', 'Good', 'Excellent'])
     
     st.markdown("---")
@@ -314,6 +314,7 @@ if submitted:
     else:
         st.error(f"🟢 **Prediction: Negative for Alzheimer's Disease**")
         st.info("Continue with regular check-ups and healthy lifestyle.")
+
 
 
 
