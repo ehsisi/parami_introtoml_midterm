@@ -154,7 +154,7 @@ with st.form("prediction_form"):
     col1, col2 = st.columns(2)
 
     with col1:
-        age = st.number_input("Age", min_value=0, max_value=150, value=None, value=25) # I want blank and no initial value
+        age = st.number_input("Age", min_value=0, max_value=150,value=25) # I want blank and no initial value
         gender = st.selectbox("Gender", [ 'M', 'F'])
 
     with col2:
@@ -314,6 +314,7 @@ if submitted:
     else:
         st.error(f"🟢 **Prediction: Negative for Alzheimer's Disease**")
         st.info("Continue with regular check-ups and healthy lifestyle.")
+
 
 
 
